@@ -66,6 +66,7 @@ const Summary = () => {
 
       <div className="bg-indigo-500 p-6 flex flex-col h-[670px] w-96 rounded-lg shadow-xl overflow-y-auto">
         <h2 className="text-white text-2xl font-bold mb-4">All Expenses</h2>
+        {expenses.length <1 && <div className="font-bold text-2xl mt-20">No Expenses added yet</div>}
         <div className="space-y-6">
           {expenses.map((ele) => (
             <ul
@@ -91,6 +92,7 @@ const Summary = () => {
 
       <div className="bg-indigo-500 p-6 flex flex-col h-[670px] w-96 rounded-lg shadow-xl overflow-y-auto">
         <h1 className="text-white text-2xl font-bold mb-4">Expenses by Category</h1>
+        {expenses.length <1 && <div className="font-bold text-2xl mt-20">No Expenses added yet</div>}
         <div className="space-y-6">
           {category.map((ele) => (
             <ul key={ele._id} className="bg-amber-300 text-gray-800 px-6 py-4 rounded-lg shadow-md flex flex-col items-start">
