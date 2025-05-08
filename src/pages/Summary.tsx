@@ -23,7 +23,7 @@ const Summary = () => {
   useEffect(() => {
     const fetchTotal = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/totalamount");
+        const res = await axios.get("https://expense-tracker-server-6hc3.onrender.com/totalamount");
         setTotalAmount(res.data);
       } catch (error) {
         console.error("Error fetching total amount:", error);
@@ -36,7 +36,7 @@ const Summary = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/getexpenses");
+        const res = await axios.get("https://expense-tracker-server-6hc3.onrender.com/getexpenses");
         setExpenses(res.data);
       } catch (error) {
         console.log("Error fetching expenses", error);
@@ -48,7 +48,7 @@ const Summary = () => {
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/category");
+        const res = await axios.get("https://expense-tracker-server-6hc3.onrender.com/category");
         setCategory(res.data);
       } catch (error) {
         console.log("Error fetching category", error);
@@ -58,7 +58,7 @@ const Summary = () => {
   }, []);
 
   return (
-    <div className="pl-4 flex flex-col gap-6 md:flex-row md:gap-12">
+    <div className="pl-4 flex flex-row gap-12">
       <div className="h-32 w-80 bg-blue-400 flex items-center justify-center flex-col rounded-xl shadow-lg p-4">
         <h1 className="text-lg text-white">Total Amount Spent</h1>
         <p className="font-bold text-2xl text-white">{totalAmount}</p>

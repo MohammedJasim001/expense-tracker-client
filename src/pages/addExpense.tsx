@@ -25,7 +25,7 @@ const AddExpense = () => {
         input.category.trim() &&
         input.description.trim()
       ) {
-        const res = await axios.post("http://localhost:3000/add", input);
+        const res = await axios.post("https://expense-tracker-server-6hc3.onrender.com/add", input);
         console.log(res);
         navigate("/");
         setInput({
